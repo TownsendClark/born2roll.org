@@ -4,17 +4,37 @@
   {% include head.html %}
 
   <body>
+    <div id="page-container">
+      <div id="header-container">
+        <header id="header">
+          {% include header.html %}
+        </header>
+      </div><!--end header-container div-->
 
-    {% include header.html %}
+      <div id="content-container" >
+        <div id="content" class="pure-g">
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+          <div id="main-container" class="pure-u-1 pure-u-sm-18-24">
+            <section id="main" role="main">
+              {{ content }}
+            </section>
+          </div><!--end main-container div-->
 
-    {% include footer.html %}
+          <div id="sidebar-container" class="pure-u-1 pure-u-sm-6-24">
+            <aside id="sidebar">
+              {% include sidebar.html %}
+            </aside>
+          </div><!--end sidebar-container div-->   
+ 
+        </div><!--end content div-->
+      </div><!--end content-container div-->
 
+      <div id="footer-container" class="pure-u-1">
+        <footer id="footer">
+          {% include footer.html %}
+        </footer>
+      </div><!--end footer-container div--> 
+    </div><!--end page-container div-->  
   </body>
 
 </html>
